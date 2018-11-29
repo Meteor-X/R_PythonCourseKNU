@@ -1,4 +1,5 @@
 ## All my labs
 
 * Uploaded:
-    * lab 1
+    * R lab 1
+    * R lab 2
