@@ -71,29 +71,17 @@ Levels: adult baby child
 ```
 ### 6. Знайти індекс першого значення NA в векторі 1,2,3,4,NA,6,7,NA,9,NA,11. Знайти кількість значень NA.
 ````R
-na_l <-list( 1, 2, 3, 4, NA, 6, 7, NA, 9, NA, 11)
-  counter_na <- function(x){
-    c<- 0;
-    p<- -1;
-    index <-0
-    for(item in x){
-      index<- index+1
-      if(is.na(item)){
-        c <- c+1
-        if(p == -1)
-          p<- index
-      }
-        
-    }
-    
-    
-    c(c,p)## кількість, позиція першого
-  }
-  counter_na(na_l)
+na_l <- c( 1, 2, 3, 4, NA, 6, 7, NA, 9, NA, 11)
+
+match(NA, na_l)
+sum(is.na(na_l))
+
 ````
 ```cmd
-> counter_na(na_l)
-[1] 3 5
+> match(NA, na_l)
+[1] 5
+> sum(is.na(na_l))
+[1] 3
 ```
 
 ### 7. Створити довільний data frame та вивести в консоль.
