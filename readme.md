@@ -6,3 +6,4 @@
     * R lab 3
     * R lab 4
     * R lab 5
+    * Python lab
