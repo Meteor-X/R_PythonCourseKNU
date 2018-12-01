@@ -79,21 +79,11 @@ my_func(mat)
 ```
 ### 7. Вивести вектор з булевими значеннями TRUE та FALSE. TRUE, якщо в стовпці є елементи >2, FALSE – якщо немає.
 ```R
-apply(mat, 2, function(t)(t > 2))
+apply(mat, 2, function(t)(sum(t > 2) > 0))
 ```
 ```cmd
-> apply(mat, 2, function(t)(t > 2))
-       [,1]  [,2]  [,3]  [,4]  [,5]
- [1,] FALSE FALSE FALSE FALSE FALSE
- [2,] FALSE FALSE FALSE FALSE FALSE
- [3,] FALSE FALSE FALSE FALSE FALSE
- [4,] FALSE FALSE FALSE FALSE FALSE
- [5,] FALSE FALSE FALSE FALSE FALSE
- [6,] FALSE FALSE FALSE FALSE FALSE
- [7,] FALSE FALSE FALSE FALSE FALSE
- [8,] FALSE FALSE FALSE FALSE FALSE
- [9,] FALSE FALSE FALSE FALSE FALSE
-[10,] FALSE FALSE FALSE FALSE FALSE
+> apply(mat, 2, function(t)(sum(t > 2) > 0))
+[1] FALSE FALSE FALSE FALSE FALSE
 ```
 ### 8. Створить список list1 <- list(observationA = c(1:5, 7:3), observationB = matrix(1:6, nrow=2)). Для цього списку знайдіть sum за допомогою lapply.
 ```R
